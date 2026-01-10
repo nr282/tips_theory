@@ -74,15 +74,6 @@ class Solution:
         return self.w[l]
 
 
-
-
-
-
-
-
-
-
-
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(w)
 # param_1 = obj.pickIndex()
