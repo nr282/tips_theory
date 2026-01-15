@@ -27,6 +27,29 @@ Structure:
 
 The time taken for implementation is 16 minutes.
 
+The implementation of bouquetPossible is a greedy algorithm.
+
+It takes the following form
+
+Suppose that hte diagram of flowers in the bouquet is:
+
+o ---> blooming
+x ---> not blooming
+
+As we move from left to right, we try to create as many bouquets as possible.
+What we can see is that greedy stays ahead.
+
+Hence, we only need to consider the left-most starting point, and if we can form a buoquest with
+the adjacent flowers, then the adjacent flowers will not partcipate in a maximizing buouquet.
+
+Our method will stay ahead in the number of created bouquets.
+
+
+    --------->
+------------->
+o   o   o   x   x   x   o   o   o   o
+
+
 
 """
 
