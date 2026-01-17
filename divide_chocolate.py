@@ -44,10 +44,8 @@ def canBeCut(sweetness, k, min_size):
     return cuts >= k
 
 
-
 class Solution:
     def maximizeSweetness(self, sweetness: List[int], k: int) -> int:
-
 
         l = 0
         r = sum(sweetness)

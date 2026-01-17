@@ -31,10 +31,9 @@ k = 10
 
 Basically, we look to use binary search on the minimum and maximum.
 
-What is the minimum?
+This problem took me around an hour to get.
+I do no checking. I am feeling slow today.
 
-
-#False, False, False, True, True, True
 
 
 
