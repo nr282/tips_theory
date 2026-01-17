@@ -30,6 +30,9 @@ class Solution:
     def passThePillow(self, n: int, time: int) -> int:
 
 
+        if n == 1:
+            return 1
+
         t = 0
         direction = "right"
         person = 1
