@@ -34,6 +34,7 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
 
 
+        #This is log(m)
         m, n = len(matrix), len(matrix[0])
         l = -1
         r = m
@@ -48,6 +49,8 @@ class Solution:
         if l == m or l == -1:
             return False
 
+
+        #This is log(n)
         l_r = -1
         r_r = n
         while l_r < r_r:
@@ -61,6 +64,9 @@ class Solution:
             return False
         else:
             return True
+
+
+        #Total is log(m) + log(n) = log(m*n)
 
 
 
