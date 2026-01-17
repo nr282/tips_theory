@@ -39,6 +39,8 @@ We may not need to touch every column in each row, since we immediately
 exclude a large number of rows.
 
 
+Time to complete: 17:01
+
 """
 
 
