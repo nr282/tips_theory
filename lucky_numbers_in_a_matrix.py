@@ -4,10 +4,14 @@ Given an m x n matrix of distinct numbers, return all lucky numbers in the matri
 A lucky number is an element of the matrix such that it is the minimum element in its row and maximum in its column.
 
 
+Time to code 5 minutes.
+First decided to calculate the min and max for each column.
+
+There may be a more optimal solution. Since this is an easy question, this is likely sufficient.
+
 """
 
 from typing import List
-
 
 class Solution:
     def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:

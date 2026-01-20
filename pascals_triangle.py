@@ -37,5 +37,4 @@ class Solution:
                     index = j-1
                     row.append(res[-1][index-1] + res[-1][index])
             res.append(row)
-
         return res
