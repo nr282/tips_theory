@@ -10,6 +10,13 @@ Test out for n = 3
 
 i = 1, row = [1]
 i = 2, row = [1, 1]
+i = 3, row = [1, 2, 1]
+
+The time it took me to solve this problem was 8 minutes.
+
+I initially was going to write some very if-else type code, but then
+decided that a two for loop approach would be more efficient.
+
 
 
 """
@@ -18,7 +25,7 @@ i = 2, row = [1, 1]
 from typing import List
 
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(self, numRows: int) -> List[   List[int]]:
 
         res = []
         for i in range(1, numRows + 1):
