@@ -101,6 +101,9 @@ I have spent too much time on this problem.
 TODO: This likely does not work.
 
 
+The general theory was developed in around 20/30 minutes.
+The struggle was the implementation.
+
 
 """
 
