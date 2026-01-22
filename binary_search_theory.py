@@ -19,4 +19,15 @@ def function(nums, i, j):
 
     return mid
 
+
+The reason that (1) Upper Bound or Lower Bound matters is for when
+there are duplicates in the target array that we are iterating over.
+
+
+Write out the post conditions.
+
+POST CONDITION: left is minimum such that target <= nums[left].
+the exiting l==r, is the [x,y], x=l in the value here.
+
+
 """

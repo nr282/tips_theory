@@ -104,6 +104,9 @@ TODO: This likely does not work.
 The general theory was developed in around 20/30 minutes.
 The struggle was the implementation.
 
+Edge cases to check would be empty list.
+List with one element.
+We can check these cases on each element.
 
 """
 
@@ -185,23 +188,23 @@ def binary_search_lesser(nums1, target):
 
 
 
-def strictly_greater(nums1, nums2, target):
+def strictly_greater_or_equal(nums1, nums2, target):
 
     s = len(nums1)
     t = len(nums2)
     x = binary_search_greater(nums1, target)
     y = binary_search_greater(nums2, target)
     z = float(s + t) / 2
-    return x + y < z
+    return x + y <= z
 
-def strictly_less(nums1, nums2, target):
+def strictly_less_or_equal(nums1, nums2, target):
 
     s = len(nums1)
     t = len(nums2)
     x = binary_search_lesser(nums1, target)
     y = binary_search_lesser(nums2, target)
     z = float(s + t) / 2
-    return x + y < z
+    return x + y <= z
 
 def find_upper_bound_for_median_range(nums1, nums2):
     """
@@ -212,12 +215,12 @@ def find_upper_bound_for_median_range(nums1, nums2):
     min_val = max(nums1[0], nums2[0])
     max_val = min(nums2[-1], nums2[-1])
 
-    l = min_val - 1
+    l = min_val
     r = max_val
 
     while l < r:
         mid = l + (r - l) // 2
-        target_is_greater_than_median = strictly_greater(nums1, nums2, mid)
+        target_is_greater_than_median = strictly_greater_or_equal(nums1, nums2, mid)
         if target_is_greater_than_median:
             l = mid + 1
         else:
@@ -229,12 +232,12 @@ def find_lower_bound_for_median_range(nums1, nums2):
     min_val = max(nums1[0], nums2[0])
     max_val = min(nums2[-1], nums2[-1])
 
-    l = min_val - 1
+    l = min_val
     r = max_val
 
     while l < r:
         mid = l + (r - l) // 2
-        target_is_less_than_median = strictly_less(nums1, nums2, mid)
+        target_is_less_than_median = strictly_less_or_equal(nums1, nums2, mid)
         if target_is_less_than_median:
             l = mid + 1
         else:
