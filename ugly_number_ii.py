@@ -67,12 +67,33 @@ The multiplication is: 2 * 3 * 4 = 24
 
 
 
+This problem took 30 minutes to solve.
+Much of the time was trying to understand and first formulate the calculation for the
+lcm(a,b,c).
 
 """
 
+def lcm(a,b):
+
+    if a < b:
+        x = a
+        y = b
+    else:
+        x = b
+        y = a
+
+    r = x % y
+    if r == 0:
+        return y
+    else:
+        return x * y
+
+def lcm(a,b,c):
+    return lcm(a, lcm(b,c))
+
 def kthUglyNumber(a: int, b: int, c: int, target: int) -> int:
 
-    return  target // a + target // b + target // c - target // (a * b) - target // (b * c) - target // (c * a) - target // (a * b * c)
+    return  target // a + target // b + target // c - target // lcm(a,b) - target // lcm(b, c) - target // lcm(c, a) - target // lcm(a, b, c)
 
 def nthUglyNumber(n: int, a: int, b: int, c: int) -> int:
 

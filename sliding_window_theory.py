@@ -19,6 +19,9 @@ For sliding window, I believe that we should use
 
 from typing import List
 
+
+#Somehow I found this solution in the notes. It fails on a simple test case provided by:
+#[0] where it reports 1 as an answer.
 def findMaxConsecutiveOnesBad(nums: List[int]) -> int:
 
     #Take the example nums= [0]
@@ -55,6 +58,8 @@ def findMaxConsecutiveOnesGood(nums: List[int]) -> int:
     #l is not None and r is not None means there is an active window
     #All active windows must be processed into result by the end of
     #the function.
+
+    #There is a window represented by l and r.
     l = None
     r = None
     n = len(nums)
