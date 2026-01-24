@@ -95,9 +95,6 @@ def isRunnable(n, batteries, mid):
             return isRunnable
 
 
-
-    print(f"IsRunnable {mid}: {isRunnable}")
-
     return isRunnable
 
 from typing import List
@@ -114,7 +111,7 @@ def maxRunTime(n: int, batteries: List[int]) -> int:
         else:
             l = mid + 1
 
-    return l - 1
+    return l
 
 
 if __name__ == "__main__":
@@ -150,6 +147,14 @@ if __name__ == "__main__":
 
     batteries = [5, 3, 9]
     n = 2
+
+    result = maxRunTime(n, batteries)
+
+    print("Result is provided by: ")
+    print(result)
+
+    n = 2
+    batteries = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
     result = maxRunTime(n, batteries)
 
