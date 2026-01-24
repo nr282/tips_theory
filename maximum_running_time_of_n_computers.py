@@ -68,6 +68,15 @@ I am thinking that is it most optimal to use the larger batteries first, and the
 smaller batteries last.
 
 
+n = 3
+batteries = [7,5,6,3,9,10]
+
+computer 1 ---> 10,3 ---> 13
+computer 2 ---> 9,5  ---> 14
+computer 3 ---> 7,6 ----> 13
+
+
+
 """
 
 from collections import deque
@@ -75,8 +84,6 @@ from heapq import heappush, heappop, heapify
 
 
 def isRunnable(n, batteries, mid):
-
-
 
     h = [0 for _ in range(n)]
     heapify(h)
@@ -115,12 +122,9 @@ def maxRunTime(n: int, batteries: List[int]) -> int:
 
 
 if __name__ == "__main__":
-    """
+
     n = 2
     batteries = [7, 5, 6, 3, 9]
-
-
-
 
     result = maxRunTime(n, batteries)
 
@@ -142,8 +146,6 @@ if __name__ == "__main__":
 
     print("Result is provided by: ")
     print(result)
-    
-    """
 
     batteries = [5, 3, 9]
     n = 2
@@ -155,6 +157,14 @@ if __name__ == "__main__":
 
     n = 2
     batteries = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+    result = maxRunTime(n, batteries)
+
+    print("Result is provided by: ")
+    print(result)
+
+    n = 3
+    batteries = [7, 5, 6, 3, 9, 10]
 
     result = maxRunTime(n, batteries)
 
