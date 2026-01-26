@@ -77,12 +77,7 @@ from typing import List
 def kthSmallestPrimeFraction(arr: List[int], k: int) -> List[int]:
 
 
-    i = 0
-    j = len(arr) - 1
-    count = 0
-    starting =
-    while count < k:
-
+    pass
 
 
 
